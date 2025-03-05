@@ -26,17 +26,17 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">Name</label>
-                    <Input id="name" placeholder="Your name" />
+                    <Input id="name" placeholder="Your name" required />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">Email</label>
-                    <Input id="email" type="email" placeholder="Your email" />
+                    <Input id="email" type="email" placeholder="Your email" required />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">Message</label>
-                  <Textarea id="message" placeholder="Your message" rows={5} />
+                  <Textarea id="message" placeholder="Your message" rows={5} required />
                 </div>
 
                 <Button className="w-full">Send Message</Button>
