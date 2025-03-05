@@ -5,6 +5,8 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Certificate from '@/components/certification';
+import Certification from '@/components/certification';
 
 export default function Home() {
   return (
@@ -33,9 +35,34 @@ export default function Home() {
             buttonText="View"
             link="" // Added link prop
           />
-
         </div>
       </div>
+
+      <div className="px-4 py-28">
+        <h2 className="text-3xl font-bold text-center mb-6">Certification & ExtraCurriculam</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+          <Certification title="Python Course"
+            platform='NPTEL'
+            year='2023' />
+          <Certification title="Won 3rd place at Kshitij"
+            platform='DBCE'
+            year='2024' />
+          <Certification title="Participated in InternSpirit Hackathon"
+            platform='Trash.Co & FiiRE'
+            year='2025' />
+              <Certification title="Participated in Snapcode Showdown"
+            platform='IIT Goa'
+            year='2025' />
+             <Certification title="Google Virtual AIML Internship"
+            platform='Eduskills'
+            year='2024' />
+        </div>
+      </div>
+
+
+
+
 
       <Contact />
       <Footer />

@@ -89,7 +89,7 @@ export default function Contact() {
             <div>
               <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
               <p className="mb-6">
-                Feel free to reach out to me through any of the following channels. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              Feel free to connect with me! I'm always open to new projects, ideas, and collaborations.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
