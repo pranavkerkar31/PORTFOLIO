@@ -1,10 +1,47 @@
-import { MessageSquare, Github, Linkedin, Twitter, Mail, Instagram } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent } from '@/components/ui/card';
+"use client"
+import { useState } from "react";
+import { MessageSquare, Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: "e3221aa9-3f96-4ab6-af85-9414c72016c4", // Replace with your Web3Forms access key
+        ...formData,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      setStatus("Message Sent!");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      setStatus("Failed to send message.");
+    }
+  };
+
   return (
     <section id="contact" className="py-16">
       <div className="container max-w-[90%] mx-auto px-4">
@@ -21,25 +58,26 @@ export default function Contact() {
           <Card className="w-full">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">Name</label>
-                    <Input id="name" placeholder="Your name" required />
+                    <Input id="name" placeholder="Your name" required value={formData.name} onChange={handleChange} />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">Email</label>
-                    <Input id="email" type="email" placeholder="Your email" required />
+                    <Input id="email" type="email" placeholder="Your email" required value={formData.email} onChange={handleChange} />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">Message</label>
-                  <Textarea id="message" placeholder="Your message" rows={5} required />
+                  <Textarea id="message" placeholder="Your message" rows={5} required value={formData.message} onChange={handleChange} />
                 </div>
 
-                <Button className="w-full">Send Message</Button>
+                <Button className="w-full" type="submit">Send Message</Button>
+                {status && <p className="text-sm text-center mt-2">{status}</p>}
               </form>
             </CardContent>
           </Card>
@@ -50,7 +88,7 @@ export default function Contact() {
             {/* Contact Info */}
             <div>
               <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-              <p className=" mb-6">
+              <p className="mb-6">
                 Feel free to reach out to me through any of the following channels. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
               <div className="space-y-4">
