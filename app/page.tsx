@@ -26,21 +26,21 @@ export default function Home() {
           <Projects
             title="Pawesome"
             description="A pet adoption and care platform."
-            image="https://api.deepai.org/job-view-file/f766e233-e176-4d37-aba3-d23b1251e868/outputs/output.jpg"
+            image="https://media.istockphoto.com/id/1497909628/photo/cat-and-dog-sitting-together-on-meadow.jpg?s=612x612&w=0&k=20&c=zpZE3_h5u8pnkml1qPyX31KXuIodY8KQ1bwkH7BWc_Q="
             buttonText="View"
             link="https://github.com/706ash/Dmqp_Pawesome"
           />
           <Projects
             title="StrayNet"
             description="A platform to help stray animals."
-            image="https://api.deepai.org/job-view-file/2ea56f5f-941e-40e0-b816-0422485e17c0/outputs/output.jpg"
+            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV-PQjs13MrTgM_6ltN6CQy6BqsOqYCDkXbw&s"
             buttonText="View"
             link="https://github.com/706ash/Internspirit-Kryptonauts"
           />
           <Projects
             title="Mini Music Player (Currently Working)"
             description="A simple and lightweight music player app."
-            image="https://api.deepai.org/job-view-file/135533b5-b532-4228-a62c-d36d9256f4b0/outputs/output.jpg"
+            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMBn8s7aQJ0SRQEMbmrszpgvLT32Y67pcpoA&s"
 
             buttonText="View"
             link=""
