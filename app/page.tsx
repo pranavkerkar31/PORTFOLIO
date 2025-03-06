@@ -15,6 +15,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <h1>hello</h1>
       
       <div>
         <Skills />
