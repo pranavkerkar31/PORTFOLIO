@@ -113,13 +113,13 @@ export default function Contact() {
                   </Button>
                 </a>
 
-                <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/pranav-kerkar" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="icon" className="w-12 h-12">
                     <Linkedin className="h-5 w-5" />
                   </Button>
                 </a>
 
-                <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/@Venom67581108" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="icon" className="w-12 h-12">
                     <Twitter className="h-5 w-5" />
                   </Button>

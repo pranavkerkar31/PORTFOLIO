@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 interface ProjectProps {
   title: string;
   description: string;
   image: string;
   buttonText: string;
-  link: string; // New prop for navigation link
+  link: string;
 }
 
 export default function Projects({ title, description, image, buttonText, link }: ProjectProps) {
@@ -13,10 +15,9 @@ export default function Projects({ title, description, image, buttonText, link }
         <img
           src={image}
           alt={title}
-          className="w-full h-48 object-cover"
+          className="w-full h-64 object-cover rounded-t-lg"
         />
       </figure>
-
 
       <div className="card-body items-center text-center">
         <h2 className="card-title">{title}</h2>
@@ -31,7 +32,6 @@ export default function Projects({ title, description, image, buttonText, link }
             {buttonText}
           </a>
         </div>
-
       </div>
     </div>
   );
