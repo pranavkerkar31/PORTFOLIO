@@ -1,10 +1,12 @@
-"use client"
+"use client";
+
 import { useState } from "react";
 import { MessageSquare, Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import React from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -15,30 +17,34 @@ export default function Contact() {
 
   const [status, setStatus] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("Sending...");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        access_key: "e3221aa9-3f96-4ab6-af85-9414c72016c4", // Replace with your Web3Forms access key
-        ...formData,
-      }),
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "e3221aa9-3f96-4ab6-af85-9414c72016c4", // Replace with your actual Web3Forms access key
+          ...formData,
+        }),
+      });
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (result.success) {
-      setStatus("Message Sent!");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      setStatus("Failed to send message.");
+      if (result.success) {
+        setStatus("Message Sent!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("Failed to send message.");
+      }
+    } catch (error) {
+      setStatus("An error occurred. Please try again.");
     }
   };
 
@@ -89,7 +95,7 @@ export default function Contact() {
             <div>
               <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
               <p className="mb-6">
-              Feel free to connect with me! I'm always open to new projects, ideas, and collaborations.
+                Feel free to connect with me! I'm always open to new projects, ideas, and collaborations.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
