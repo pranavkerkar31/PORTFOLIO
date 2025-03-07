@@ -50,7 +50,7 @@ export default function Home() {
       </div>
 
       <div className="px-4 py-28">
-        <h2 className="text-3xl font-bold text-center mb-6">Certification & Extracurricular</h2>
+        <h2 className="text-3xl font-bold text-center mb-6">Certification & Extracurriculum</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           <Certification title="Python Course" platform="NPTEL" year="2023" />
           <Certification title="Won 3rd place at Kshitij" platform="DBCE" year="2024" />
