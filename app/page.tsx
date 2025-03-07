@@ -28,7 +28,7 @@ export default function Home() {
             description="A pet adoption and care platform."
             image="https://media.istockphoto.com/id/1497909628/photo/cat-and-dog-sitting-together-on-meadow.jpg?s=612x612&w=0&k=20&c=zpZE3_h5u8pnkml1qPyX31KXuIodY8KQ1bwkH7BWc_Q="
             buttonText="View"
-            link="http://localhost:3000/videos/pawesome.mp4 "
+            link="https://youtu.be/6vkLMbO0dBc?si=03tq9deIskdSS2CN "
           />
           <Projects
             title="StrayNet"
