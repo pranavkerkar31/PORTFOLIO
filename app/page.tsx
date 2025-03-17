@@ -26,7 +26,7 @@ export default function Home() {
           <Projects
             title="Pawesome"
             description="A pet adoption and care platform."
-            image="https://media.istockphoto.com/id/1497909628/photo/cat-and-dog-sitting-together-on-meadow.jpg?s=612x612&w=0&k=20&c=zpZE3_h5u8pnkml1qPyX31KXuIodY8KQ1bwkH7BWc_Q="
+            image="./catdog.jpg"
             buttonText="View"
             link="https://youtu.be/6vkLMbO0dBc?si=03tq9deIskdSS2CN"
           />
@@ -34,14 +34,14 @@ export default function Home() {
           <Projects
             title="StrayNet"
             description="A platform to help stray animals."
-            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV-PQjs13MrTgM_6ltN6CQy6BqsOqYCDkXbw&s"
+            image="straynet.jpg"
             buttonText="View"
-            link="https://github.com/706ash/Internspirit-Kryptonauts"
+            link="http://pawsnet.vercel.app"
           />
           <Projects
             title="Mini Music Player (Currently Working)"
             description="A simple and lightweight music player app."
-            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMBn8s7aQJ0SRQEMbmrszpgvLT32Y67pcpoA&s"
+            image="./logo.jpg"
 
             buttonText="View"
             link=""
@@ -57,6 +57,7 @@ export default function Home() {
           <Certification title="Participated in InternSpirit Hackathon" platform="Trash.Co & FiiRE" year="2025" />
           <Certification title="Participated in Snapcode Showdown" platform="IIT Goa" year="2025" />
           <Certification title="Google Virtual AIML Internship" platform="Eduskills" year="2024" />
+          <Certification title="Participated in HackIndia" platform="CSharp | SingularityNet" year="2025" />
         </div>
       </div>
 
