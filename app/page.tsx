@@ -32,25 +32,25 @@ export default function Home() {
           />
 
           <Projects
-            title="StrayNet"
+            title="Pawsnet"
             description="A platform to help stray animals."
             image="straynet.jpg"
             buttonText="View"
             link="http://pawsnet.vercel.app"
           />
           <Projects
-            title="Mini Music Player (Currently Working)"
-            description="A simple and lightweight music player app."
-            image="./logo.jpg"
-
+            title="JCI Ponda Website"
+            description="An Organization website for JCI Ponda"
+            image="./jcilogo.png"
             buttonText="View"
-            link=""
+            link="http://www.jciponda.in"
+            className="w-40 h-48" // Example dimensions
           />
         </div>
       </div>
 
       <div className="px-4 py-28">
-        <h2 className="text-3xl font-bold text-center mb-6">Certification & Extracurriculum</h2>
+        <h2 className="text-3xl font-bold text-center mb-6">Certification & Curriculum</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           <Certification title="Python Course" platform="NPTEL" year="2023" />
           <Certification title="Won 3rd place at Kshitij" platform="DBCE" year="2024" />
